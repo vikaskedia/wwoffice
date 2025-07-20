@@ -1,8 +1,8 @@
-version: '3.8'
 services:
   zoom-bot:
     build: .
     container_name: zoom-bot
+    privileged: true       # Required for macOS; works on Linux too
     environment:
       - VNC_PASSWORD=password
     ports:

@@ -1,3 +1,11 @@
 # wwoffice
 
-Plan to use https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-g3
+docker-compose build
+docker-compose up
+Open http://localhost:6901 to view the desktop via noVNC.
+
+Zoom bot will run on startup and attempt to join the meeting continuously.
+
+Why use https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-g3 ?
+ - uses ubuntu 24.04
+ - updated this year

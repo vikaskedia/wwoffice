@@ -13,7 +13,7 @@ RUN wget -O /tmp/zoom.deb https://zoom.us/client/latest/zoom_amd64.deb \
     && apt install -y /tmp/zoom.deb \
     && rm /tmp/zoom.deb
 
-COPY zoom-bot.sh /usr/local/bin/zoom-bot.sh
-RUN chmod +x /usr/local/bin/zoom-bot.sh
+COPY zoom-bot.sh /usr/local/bin/zoom-bot-to-run-wwoffice.sh
+RUN chmod +x /usr/local/bin/zoom-bot-to-run-wwoffice.sh
 
-CMD ["/usr/local/bin/zoom-bot.sh"]
+CMD ["/usr/local/bin/zoom-bot-to-run-wwoffice.sh"]

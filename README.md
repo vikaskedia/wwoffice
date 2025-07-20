@@ -9,3 +9,6 @@ Zoom bot will run on startup and attempt to join the meeting continuously.
 Why use https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-g3 ?
  - uses ubuntu 24.04
  - updated this year
+
+Todo:
+1. The password is not working the default password of headless is working.

@@ -1,15 +1,9 @@
 #!/bin/bash
 
-# Script: zoom-autojoin.sh
-# Purpose: Launch Zoom and auto-join meeting as host
-
-# Meeting ID (no spaces)
 MEETING_ID="88427818415"
-
 
 # move dock to right side
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position RIGHT
-
 
 while true; do
 

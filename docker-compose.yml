@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  zoom-bot:
+    build: .
+    container_name: zoom-bot
+    environment:
+      - VNC_PASSWORD=password
+    ports:
+      - "5901:5901"
+      - "6901:6901"
+    shm_size: 2g
+    cap_add:
+      - SYS_ADMIN
+    tty: true

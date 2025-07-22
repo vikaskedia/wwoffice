@@ -6,6 +6,8 @@ services:
       - "26901:6901"  # Maps 26901 on the host to 6901 in the container
     restart: unless-stopped
     container_name: ubuntu-vnc-xfce
+    environment:
+      - VNC_PW=jaikalima99@1!
     volumes:
 #      - ./root-zoom-mount-from-host-to-cache-login-session:/home/headless/.zoom  # Bind mount to store Zoom data
       - ./dir-for-container-from-host:/home/headless/dir-for-container-from-host

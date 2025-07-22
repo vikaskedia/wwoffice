@@ -15,5 +15,5 @@ Q4) How to access this container?
 Open http://IP:26901 to view the desktop via noVNC.
 
 Q5) What are the remainign todos?
-1. The default password of headless is working.
-2. Zoom requires login the first time.
+1. Zoom requires login the first time.
+2. Zoom virtual camera does not work with ffmpeg

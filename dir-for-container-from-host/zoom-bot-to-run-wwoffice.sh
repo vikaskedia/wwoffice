@@ -44,14 +44,16 @@ while true; do
     fi
 
     echo "Step 7: Check mark dont connect to audio"
-    xdotool mousemove 48 312
-    sleep 2
+    xdotool mousemove 50 303
+    sleep 5
     xdotool click 1
-
+    sleep 5
+	
     echo "Step 8: Check mark turn off my video"
-    xdotool mousemove 48 353
-    sleep 2
+    xdotool mousemove 50 339
+    sleep 5
     xdotool click 1
+    sleep 5
 
     echo "Step 9: Clicking on meeting ID text area"
     xdotool mousemove 63 203 

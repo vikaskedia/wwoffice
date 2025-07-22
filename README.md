@@ -12,3 +12,4 @@ Why use https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-g3 ?
 
 Todo:
 1. The password is not working the default password of headless is working.
+2. Zoom requires login the first time.

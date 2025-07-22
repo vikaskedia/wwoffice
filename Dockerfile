@@ -1,13 +1,18 @@
+# Use the base image
 FROM accetto/ubuntu-vnc-xfce-g3:24.04
 
+# Set the maintainer label
+LABEL maintainer="your_name@example.com"
+
+# Ensure we are using root to install packages
 USER root
 
-# Install Zoom dependencies and automation tools
-RUN apt-get update && apt-get install -y \
-    wget curl gnupg2 xdotool wmctrl \
-    libglib2.0-0 libxext6 libsm6 libxrender1 \
-    && apt-get clean
+# Update package lists and install additional packages (replace 'your-packages' with actual packages)
+RUN apt-get update && apt-get -y upgrade 
 
+# Install Zoom dependencies and automation tools
+RUN apt-get install -y wget curl gnupg2 xdotool wmctrl libglib2.0-0 libxext6 libsm6 libxrender1 
+    
 # Install Zoom
 RUN wget -O /tmp/zoom.deb https://zoom.us/client/latest/zoom_amd64.deb \
     && apt install -y /tmp/zoom.deb \
@@ -20,8 +25,13 @@ RUN apt-get install -y \
     v4l2loopback-utils \
     && apt-get clean
 
+
 COPY zoom-bot-to-run-wwoffice.sh /usr/local/bin/zoom-bot-to-run-wwoffice.sh
 COPY zoom-background.mp4 /tmp/zoom-background.mp4
 RUN chmod +x /usr/local/bin/zoom-bot-to-run-wwoffice.sh
 
+# Expose the necessary ports (same as the original run command)
+EXPOSE 5901 6901
+
+# Set the default command (the base image already starts the necessary VNC server)
 CMD ["/usr/local/bin/zoom-bot-to-run-wwoffice.sh"]

@@ -14,9 +14,7 @@ If “Join Before Host” is Enabled
     -- An alternative host joins (and becomes host).
  -- The meeting can continue indefinitely (no 40-minute limit for paid accounts).
 
-So why is this project needed? Not sure
-
-Only use this project if its important for the host to join the meeting.
+So why is this project needed? If the host does not join first then the breakout rooms do not get created.
 
 Q3) Why use https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-g3 ?
  - uses ubuntu 24.04

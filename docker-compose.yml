@@ -9,3 +9,4 @@ services:
     container_name: ubuntu-vnc-xfce
     volumes:
       - ./root-zoom-mount-from-host-to-cache-login-session:/home/headless/.zoom  # Bind mount to store Zoom data
+      - ./dir-for-container-from-host:/home/headless/dir-for-container-from-host

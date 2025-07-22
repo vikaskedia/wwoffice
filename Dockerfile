@@ -26,12 +26,7 @@ RUN apt-get install -y \
     && apt-get clean
 
 
-COPY zoom-bot-to-run-wwoffice.sh /usr/local/bin/zoom-bot-to-run-wwoffice.sh
-COPY zoom-background.mp4 /tmp/zoom-background.mp4
-RUN chmod +x /usr/local/bin/zoom-bot-to-run-wwoffice.sh
-
-# Expose the necessary ports (same as the original run command)
 EXPOSE 5901 6901
 
 # Set the default command (the base image already starts the necessary VNC server)
-CMD ["/usr/local/bin/zoom-bot-to-run-wwoffice.sh"]
+CMD ["/home/headless/dir-for-container-from-host/zoom-bot-to-run-wwoffice.sh"]

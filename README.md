@@ -1,15 +1,19 @@
 # wwoffice
 
-docker-compose build
-docker-compose up
-Open http://localhost:6901 to view the desktop via noVNC.
+Q1) Why is this project needed?
+We want to run a zoom meeting 24x7
 
-Zoom bot will run on startup and attempt to join the meeting continuously.
-
-Why use https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-g3 ?
+Q2) Why use https://hub.docker.com/r/accetto/ubuntu-vnc-xfce-g3 ?
  - uses ubuntu 24.04
  - updated this year
 
-Todo:
-1. The password is not working the default password of headless is working.
+Q3) How to run this container?
+docker-compose build
+docker-compose up
+
+Q4) How to access this container?
+Open http://IP:26901 to view the desktop via noVNC.
+
+Q5) What are the remainign todos?
+1. The default password of headless is working.
 2. Zoom requires login the first time.

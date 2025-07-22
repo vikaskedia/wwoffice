@@ -3,7 +3,6 @@ services:
   vnc-container:
     build: .
     ports:
-      - "25901:5901"  # Maps 25901 on the host to 5901 in the container
       - "26901:6901"  # Maps 26901 on the host to 6901 in the container
     restart: unless-stopped
     container_name: ubuntu-vnc-xfce

@@ -6,7 +6,7 @@ MEETING_ID="88427818415"
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position RIGHT
 
 modprobe v4l2loopback devices=1 video_nr=10 card_label="ZoomCam" exclusive_caps=1
-ffmpeg -stream_loop -1 -re -i /tmp/zoom-background.mp4 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 /dev/video10 &
+ffmpeg -stream_loop -1 -re -i /home/headless/dir-for-container-from-host/zoom-background.mp4 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 /dev/video10 &
 
 while true; do
 
